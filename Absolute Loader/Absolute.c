@@ -5,7 +5,7 @@ void main()
 {
   FILE *fp;
   int i,addr1,l,j,staddre;
-  char name[10],line[50],objname[10],addr[10],rec[10],ch,staddr[10];
+  char name[10],line[200],objname[10],addr[10],rec[10],ch,staddr[10];
   printf("\nEnter the Program Name : " );
   scanf("%s",name);
   fp=fopen("SAMPLE.txt","r");
@@ -29,7 +29,7 @@ void main()
 			{
      			if(line[i]!='^')
       			{
-        			printf("00%X \t %c%c\n", staddre,line[i],line[i+1]);
+        			printf("00%x \t %c%c\n", staddre,line[i],line[i+1]);
         			staddre++;
         			i=i+2;
       			}
@@ -43,6 +43,7 @@ void main()
 }
 
 /*
+
 INPUT
 
 H^SAMPLE^001000^0035
@@ -64,4 +65,5 @@ Name of Object Program : SAMPLE
 002001 	 11
 002002 	 11
 Jump to Excecution Address : 001000
+
 */
